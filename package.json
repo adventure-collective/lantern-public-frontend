@@ -1,0 +1,15 @@
+{
+  "name": "lantern-public-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:adventure-collective/lantern-public-frontend.git",
+  "author": "Ben Foxall <benfoxall@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3",
+    "ws": "^3.0.0"
+  },
+  "scripts": {
+    "start": "node ."
+  }
+}
