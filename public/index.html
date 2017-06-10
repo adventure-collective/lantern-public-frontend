@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {font-family: sans-serif;}
+      label {display: block}
+    </style>
+  </head>
+  <body>
+    <h1>L I G H T S</h1>
+
+    <form method="post" target="nope">
+      <label> X
+        <input type="number" name="x" value="0" step="any">
+      </label>
+      <label> Y
+        <input type="number" name="y" value="0" step="any">
+      </label>
+      <label> Z
+        <input type="number" name="z" value="0" step="any">
+      </label>
+      <label> Colour
+        <input type="color" name="c" value="#ff0088">
+      </label>
+      <input type="submit" value="send">
+    </form>
+
+    <!-- hack to keep the form open -->
+    <iframe name="nope" style="display:none"></iframe>
+  </body>
+</html>

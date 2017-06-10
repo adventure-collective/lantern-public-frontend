@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {font-family: sans-serif;}
+      label {display: block} 
+    </style>
+  </head>
+  <body>
+    <h2>L I S T E N E R</h2>
+    <p>(this would be embedded in the three.js ui)</p>
+    <ul id="log"></ul>
+    <script>
+
+      // url might be hard coded
+      // maybe use ReconnectingWebSocket
+      const socket = new WebSocket(`ws://${location.hostname}:${location.port}`)
+
+      socket.addEventListener('message', e => {
+
+        const data = JSON.parse(e.data)
+        console.log("TODO: handle ", data)
+
+
+        // debug
+        const li = document.createElement('li')
+        li.textContent = e.data
+        li.style.backgroundColor = data.c
+        log.appendChild(li)
+
+      })
+    </script>
+  </body>
+</html>
