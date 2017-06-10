@@ -5,7 +5,7 @@
     <title></title>
     <style media="screen">
       body {font-family: sans-serif;}
-      label {display: block} 
+      label {display: block}
     </style>
   </head>
   <body>
@@ -16,7 +16,8 @@
 
       // url might be hard coded
       // maybe use ReconnectingWebSocket
-      const socket = new WebSocket(`ws://${location.hostname}:${location.port}`)
+      const host = document.location.origin.replace(/^http/, 'ws')
+      const socket = new WebSocket(host)
 
       socket.addEventListener('message', e => {
 
